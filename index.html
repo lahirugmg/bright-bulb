@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thinking Knowledge</title>
+  <meta name="description" content="Know more. Think deeper. Bite-sized science, technology, nature, history and big ideas for curious minds.">
+  <meta property="og:title" content="Thinking Knowledge">
+  <meta property="og:description" content="Bite-sized science, technology, nature, history and big ideas for curious minds.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1F8A4C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Thinking Knowledge home">
+      <img src="favicon.svg" alt="" width="36" height="36">
+      <span>Thinking Knowledge</span>
+    </a>
+    <a class="btn btn-follow" data-fb-link href="https://www.facebook.com/profile.php?id=61595433115159" target="_blank" rel="noopener">Follow on Facebook</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Know more.<br>Think deeper.</h1>
+        <p class="lede">Every post starts with a question. Science, technology, nature, history and big ideas, explained in a minute or two, for curious kids and the grown-ups who answer their questions.</p>
+      </div>
+
+      <div class="quiz" aria-live="polite">
+        <div class="card" id="card">
+          <p class="card-topic" id="card-topic">Science</p>
+          <p class="card-question" id="card-question">Loading a question…</p>
+          <div class="card-answer" id="card-answer" hidden>
+            <p id="card-answer-text"></p>
+          </div>
+          <div class="card-actions">
+            <button class="btn btn-reveal" id="reveal" type="button" aria-expanded="false" aria-controls="card-answer">Show the answer</button>
+            <button class="btn btn-ghost" id="next" type="button">Next question</button>
+          </div>
+        </div>
+
+        <div class="shelf" role="group" aria-label="Pick a topic">
+          <button class="spine is-active" type="button" data-topic="all" aria-pressed="true">All</button>
+          <button class="spine" type="button" data-topic="Science" aria-pressed="false">Science</button>
+          <button class="spine" type="button" data-topic="Technology" aria-pressed="false">Technology</button>
+          <button class="spine" type="button" data-topic="Nature" aria-pressed="false">Nature</button>
+          <button class="spine" type="button" data-topic="History" aria-pressed="false">History</button>
+          <button class="spine" type="button" data-topic="Ideas" aria-pressed="false">Ideas</button>
+        </div>
+        <p class="shelf-hint">Pull a book off the shelf to pick a topic.</p>
+      </div>
+    </section>
+
+    <section class="topics" aria-labelledby="topics-heading">
+      <h2 id="topics-heading">What you'll find on the page</h2>
+      <dl class="topic-list">
+        <div class="topic" style="--c: var(--science)">
+          <dt>Science</dt>
+          <dd>How the body, the planets and everyday things actually work.</dd>
+        </div>
+        <div class="topic" style="--c: var(--technology)">
+          <dt>Technology</dt>
+          <dd>The inventions behind phones, computers and the internet, and the people who made them.</dd>
+        </div>
+        <div class="topic" style="--c: var(--nature)">
+          <dt>Nature</dt>
+          <dd>Animals, plants and oceans doing things you won't believe until you see them.</dd>
+        </div>
+        <div class="topic" style="--c: var(--history)">
+          <dt>History</dt>
+          <dd>Ancient kingdoms, great journeys and surprising timelines from around the world.</dd>
+        </div>
+        <div class="topic" style="--c: var(--ideas)">
+          <dt>Ideas</dt>
+          <dd>Puzzles and big questions that make you stop and think.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="follow" aria-labelledby="follow-heading">
+      <h2 id="follow-heading">Get a new question in your feed</h2>
+      <p>Follow Thinking Knowledge on Facebook, share a post with someone curious, and tell us in the comments what you'd like explained next.</p>
+      <a class="btn btn-follow btn-large" data-fb-link href="https://www.facebook.com/profile.php?id=61595433115159" target="_blank" rel="noopener">Follow Thinking Knowledge</a>
+    </section>
+
+    <section class="sister" lang="si" aria-label="Sinhala sister page">
+      <p><span lang="en">Prefer to read in Sinhala?</span> <a href="https://www.facebook.com/sithanadanuma/" target="_blank" rel="noopener">සිතන දැනුම</a> <span lang="en">is our Sinhala page.</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Thinking Knowledge</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

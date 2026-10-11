@@ -1,0 +1,255 @@
+:root {
+  --leaf: #1F8A4C;
+  --leaf-dark: #146236;
+  --bulb: #FFC93C;
+  --ink: #1C2B39;
+  --ink-soft: #4A5A6A;
+  --sky: #EAF6FF;
+  --paper: #FFFFFF;
+
+  --science: #2F6FD0;
+  --technology: #E07A16;
+  --nature: #2E9E5B;
+  --history: #C2412F;
+  --ideas: #7449C4;
+
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+a { color: var(--leaf-dark); }
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: .65rem 1.2rem;
+  font: 700 1rem/1.2 var(--body);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn-follow { background: var(--leaf); color: var(--paper); }
+.btn-follow:hover { background: var(--leaf-dark); }
+
+.btn-reveal { background: var(--bulb); color: var(--ink); }
+.btn-reveal:hover { background: #F5B814; }
+
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+.btn-ghost:hover { background: rgba(28, 43, 57, .06); }
+
+.btn-large { padding: .9rem 1.6rem; font-size: 1.125rem; }
+
+/* Hero */
+main { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 2rem 0 4rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero { grid-template-columns: 5fr 6fr; gap: 4rem; padding: 4rem 0 5rem; }
+}
+
+h1, h2 {
+  font-family: var(--display);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: clamp(2.75rem, 7vw, 5rem);
+  color: var(--leaf-dark);
+}
+
+.lede {
+  max-width: 34rem;
+  margin: 1.25rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.2rem;
+}
+
+/* Question card */
+.card {
+  --c: var(--science);
+  position: relative;
+  background: var(--paper);
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border-top: 10px solid var(--c);
+  box-shadow: 0 18px 40px -24px rgba(28, 43, 57, .45);
+  min-height: 19rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-topic {
+  margin: 0;
+  font-weight: 700;
+  font-size: .95rem;
+  color: var(--c);
+}
+
+.card-question {
+  margin: .5rem 0 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  line-height: 1.2;
+  max-width: 30ch;
+}
+
+.card-answer {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  background: #FFF6D9;
+  border-radius: .75rem;
+}
+.card-answer p { margin: 0; max-width: 60ch; }
+
+.card-answer:not([hidden]) { animation: open .25s ease-out; }
+@keyframes open { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+/* Book-spine topic shelf: the one playful thing on the page */
+.shelf {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 9.5rem;
+  margin-top: 1.5rem;
+  padding: 0 .5rem;
+  border-bottom: 10px solid #8A5A34;
+  border-radius: 0 0 4px 4px;
+}
+
+.spine {
+  --c: var(--ink);
+  flex: 1 1 0;
+  min-width: 0;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+  background: var(--c);
+  color: var(--paper);
+  font: 700 .9rem/1 var(--body);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: height .2s ease, filter .2s ease;
+  box-shadow: inset -6px 0 0 rgba(255, 255, 255, .14);
+}
+
+.spine[data-topic="all"]        { --c: var(--ink);        height: 78%; }
+.spine[data-topic="Science"]    { --c: var(--science);    height: 92%; }
+.spine[data-topic="Technology"] { --c: var(--technology); height: 84%; }
+.spine[data-topic="Nature"]     { --c: var(--nature);     height: 96%; }
+.spine[data-topic="History"]    { --c: var(--history);    height: 80%; }
+.spine[data-topic="Ideas"]      { --c: var(--ideas);      height: 88%; }
+
+.spine:hover { filter: brightness(1.08); }
+.spine.is-active { height: 100%; transform: rotate(180deg) translateY(10px); box-shadow: inset -6px 0 0 rgba(255,255,255,.14), 0 0 0 3px var(--bulb); }
+
+.shelf-hint { margin: .6rem 0 0; font-size: .95rem; color: var(--ink-soft); }
+
+/* Topics */
+.topics { padding: 3rem 0; border-top: 2px solid rgba(28, 43, 57, .12); }
+
+h2 { font-weight: 800; font-size: clamp(1.75rem, 4vw, 2.5rem); }
+
+.topic-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem 3rem;
+  margin: 2rem 0 0;
+}
+@media (min-width: 720px) { .topic-list { grid-template-columns: 1fr 1fr; } }
+
+.topic { padding-left: 1rem; border-left: 6px solid var(--c); }
+.topic dt { font-family: var(--display); font-weight: 700; font-size: 1.3rem; color: var(--c); }
+.topic dd { margin: .25rem 0 0; max-width: 40ch; }
+
+/* Follow */
+.follow {
+  margin: 1rem 0 2rem;
+  padding: 2.5rem 1.5rem;
+  background: var(--leaf);
+  color: var(--paper);
+  border-radius: 1.25rem;
+}
+.follow p { max-width: 46ch; margin: 1rem 0 1.5rem; }
+.follow .btn-follow { background: var(--bulb); color: var(--ink); }
+.follow .btn-follow:hover { background: #F5B814; }
+
+.sister { padding: .5rem 0 3rem; font-size: 1.05rem; }
+.sister a { font-weight: 700; }
+
+.site-footer { text-align: center; padding: 2rem 1rem; color: var(--ink-soft); font-size: .95rem; }
+
+@media (max-width: 480px) {
+  .site-header .btn-follow { padding: .55rem .9rem; font-size: .9rem; }
+  .brand span { font-size: 1.05rem; }
+  .shelf { height: 8rem; }
+  .spine { font-size: .8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
