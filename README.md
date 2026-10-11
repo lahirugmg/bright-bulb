@@ -1,6 +1,6 @@
-# Thinking Knowledge
+# Bright Bulb
 
-Website for the **Thinking Knowledge** Facebook page: bite-sized science, technology, nature, history and big ideas for an English-reading audience. Sister page to the Sinhala page [සිතන දැනුම](https://www.facebook.com/sithanadanuma/).
+Website for the **Bright Bulb** Facebook page: bite-sized science, technology, nature, history and big ideas for an English-reading audience. Sister page to the Sinhala page [සිතන දැනුම](https://www.facebook.com/sithanadanuma/).
 
 Plain HTML, CSS and JavaScript, hosted on GitHub Pages. No build step.
 
