@@ -1,5 +1,5 @@
 // Set this to the Facebook page URL. Every "Follow" button uses it.
-const FACEBOOK_PAGE_URL = "https://www.facebook.com/profile.php?id=61595433115159";
+const FACEBOOK_PAGE_URL = "https://www.facebook.com/brightbulb";
 
 const QUESTIONS = [
   { topic: "Science", q: "How many hearts does an octopus have?",
